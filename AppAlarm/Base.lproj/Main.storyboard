@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dfE-Zz-9ua">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hẹn giờ-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Twd-Lz-PXA">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVG-wx-DcD">
+                                <rect key="frame" x="280" y="481" width="90" height="90"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.16078431369999999" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="DjH-cV-01W"/>
+                                    <constraint firstAttribute="width" secondItem="BVG-wx-DcD" secondAttribute="height" multiplier="1:1" id="EqW-wx-zSO"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Bắt đầu" cornerStyle="small"/>
+                                <connections>
+                                    <action selector="startButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P7r-cD-aBL"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.89999997615814209" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5b-vC-g72">
+                                <rect key="frame" x="20" y="621" width="350" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khi hẹn giờ kết thúc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1k-mo-XYM">
+                                        <rect key="frame" x="8" y="10" width="151" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RY2-Qg-qtQ">
+                                        <rect key="frame" x="304" y="4" width="36" height="32"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Nhạc">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="J1k-mo-XYM" firstAttribute="top" secondItem="L5b-vC-g72" secondAttribute="top" constant="10" id="527-hZ-E6i"/>
+                                    <constraint firstItem="J1k-mo-XYM" firstAttribute="leading" secondItem="L5b-vC-g72" secondAttribute="leadingMargin" id="Ac1-Mk-NUr"/>
+                                    <constraint firstAttribute="height" constant="40" id="HRv-cg-KFE"/>
+                                    <constraint firstItem="RY2-Qg-qtQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J1k-mo-XYM" secondAttribute="trailing" constant="8" symbolic="YES" id="bNk-T3-TYd"/>
+                                    <constraint firstAttribute="trailing" secondItem="RY2-Qg-qtQ" secondAttribute="trailing" constant="10" id="fDn-CQ-aYy"/>
+                                    <constraint firstItem="RY2-Qg-qtQ" firstAttribute="top" secondItem="L5b-vC-g72" secondAttribute="top" constant="4" id="guA-ac-WWx"/>
+                                    <constraint firstAttribute="bottom" secondItem="RY2-Qg-qtQ" secondAttribute="bottom" constant="4" id="spK-wp-lVp"/>
+                                    <constraint firstItem="J1k-mo-XYM" firstAttribute="centerY" secondItem="RY2-Qg-qtQ" secondAttribute="centerY" id="tfn-kf-D7k"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MG-Xc-DGP">
+                                <rect key="frame" x="50" y="147" width="290" height="53"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHx-8z-hfO">
+                                <rect key="frame" x="20" y="481" width="90" height="90"/>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="CTw-6J-FfB"/>
+                                    <constraint firstAttribute="width" secondItem="jHx-8z-hfO" secondAttribute="height" multiplier="1:1" id="kT1-ee-2It"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Huỷ" cornerStyle="small"/>
+                                <connections>
+                                    <action selector="cancelButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sw3-o1-bkc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9JK-KZ-A7K"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3MG-Xc-DGP" firstAttribute="leading" secondItem="9JK-KZ-A7K" secondAttribute="leading" constant="50" id="29B-nf-3ps"/>
+                            <constraint firstItem="9JK-KZ-A7K" firstAttribute="trailing" secondItem="3MG-Xc-DGP" secondAttribute="trailing" constant="50" id="5Dr-0J-oNL"/>
+                            <constraint firstItem="3MG-Xc-DGP" firstAttribute="centerX" secondItem="9JK-KZ-A7K" secondAttribute="centerX" id="7hd-N6-0i1"/>
+                            <constraint firstItem="L5b-vC-g72" firstAttribute="leading" secondItem="9JK-KZ-A7K" secondAttribute="leading" constant="20" id="H5r-c3-yfu"/>
+                            <constraint firstItem="9JK-KZ-A7K" firstAttribute="trailing" secondItem="L5b-vC-g72" secondAttribute="trailing" constant="20" id="MZQ-UN-2TM"/>
+                            <constraint firstItem="L5b-vC-g72" firstAttribute="top" secondItem="jHx-8z-hfO" secondAttribute="bottom" constant="50" id="Mhu-Wp-QoX"/>
+                            <constraint firstItem="9JK-KZ-A7K" firstAttribute="bottom" secondItem="L5b-vC-g72" secondAttribute="bottom" constant="100" id="NZ5-rb-04f"/>
+                            <constraint firstItem="L5b-vC-g72" firstAttribute="top" secondItem="BVG-wx-DcD" secondAttribute="bottom" constant="50" id="X7Q-Aa-5lj"/>
+                            <constraint firstItem="L5b-vC-g72" firstAttribute="centerX" secondItem="9JK-KZ-A7K" secondAttribute="centerX" id="ftj-0R-4g0"/>
+                            <constraint firstItem="9JK-KZ-A7K" firstAttribute="trailing" secondItem="BVG-wx-DcD" secondAttribute="trailing" constant="20" id="jds-4B-I4X"/>
+                            <constraint firstItem="3MG-Xc-DGP" firstAttribute="top" secondItem="9JK-KZ-A7K" secondAttribute="top" constant="100" id="l57-QK-Et4"/>
+                            <constraint firstItem="jHx-8z-hfO" firstAttribute="leading" secondItem="9JK-KZ-A7K" secondAttribute="leading" constant="20" id="w9B-bl-yQH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hẹn giờ" image="timer" catalog="system" id="D7b-1T-2uT"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="jHx-8z-hfO" id="9uJ-EL-9WD"/>
+                        <outlet property="soundSettingViewOutlet" destination="L5b-vC-g72" id="7lH-by-o8i"/>
+                        <outlet property="startButton" destination="BVG-wx-DcD" id="t3P-gq-i3O"/>
+                        <outlet property="timerLabel" destination="3MG-Xc-DGP" id="sfb-2q-ohl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="-496"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1aN-Fb-NnG">
+            <objects>
+                <tabBarController id="dfE-Zz-9ua" customClass="TabBarController" customModule="AppAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rB9-vs-XML">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="AFz-Te-BIz"/>
+                        <segue destination="RqR-jm-mLL" kind="relationship" relationship="viewControllers" id="K2Z-Cg-wET"/>
+                        <segue destination="kKJ-5D-KpQ" kind="relationship" relationship="viewControllers" id="2NF-U6-sqv"/>
+                        <segue destination="uwn-AP-DE5" kind="relationship" relationship="viewControllers" id="5et-pZ-Mw0"/>
+                        <segue destination="vl2-3G-kGJ" kind="relationship" relationship="viewControllers" id="AQD-SO-hC7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58c-WQ-UKi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="281"/>
+        </scene>
+        <!--Báo thức-->
+        <scene sceneID="wmw-k2-cJl">
+            <objects>
+                <viewController id="3Sh-Hh-qdY" customClass="SettingAlarmViewController" customModule="AppAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KZU-R0-Nqi">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Báo thức" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PId-cD-KC3">
+                                <rect key="frame" x="16" y="99" width="132.33333333333334" height="38.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5z6-eu-U6u">
+                                <rect key="frame" x="0.0" y="145.33333333333331" width="390" height="615.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ivE-Cx-LCo"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ivE-Cx-LCo" firstAttribute="trailing" secondItem="5z6-eu-U6u" secondAttribute="trailing" id="419-YB-Q66"/>
+                            <constraint firstItem="PId-cD-KC3" firstAttribute="top" secondItem="ivE-Cx-LCo" secondAttribute="top" constant="8" id="dV8-Th-CYs"/>
+                            <constraint firstItem="PId-cD-KC3" firstAttribute="leading" secondItem="ivE-Cx-LCo" secondAttribute="leading" constant="16" id="fSq-YD-nYO"/>
+                            <constraint firstItem="5z6-eu-U6u" firstAttribute="leading" secondItem="ivE-Cx-LCo" secondAttribute="leading" id="gLh-86-4N1"/>
+                            <constraint firstItem="5z6-eu-U6u" firstAttribute="top" secondItem="PId-cD-KC3" secondAttribute="bottom" constant="8" id="wVg-O0-P2f"/>
+                            <constraint firstItem="ivE-Cx-LCo" firstAttribute="bottom" secondItem="5z6-eu-U6u" secondAttribute="bottom" id="yex-jm-4Vw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Báo thức" id="59N-DU-t2k">
+                        <barButtonItem key="leftBarButtonItem" title="Sửa" id="O79-IT-Wtm">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <action selector="editBarButtonAction:" destination="3Sh-Hh-qdY" id="XeK-hb-LuH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="X3A-Rm-MpG">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <action selector="addBarButtonAction:" destination="3Sh-Hh-qdY" id="0eB-JP-ck4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="alarmTableView" destination="5z6-eu-U6u" id="vad-kw-G5l"/>
+                        <segue destination="TVp-SL-vqO" kind="presentation" identifier="showVC" id="V4h-kd-x1f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhM-vT-uTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1470.7692307692307" y="280.80568720379148"/>
+        </scene>
+        <!--Edit Alarm View Controller-->
+        <scene sceneID="SO6-kC-U0m">
+            <objects>
+                <viewController id="TVp-SL-vqO" customClass="EditAlarmViewController" customModule="AppAlarm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hOQ-2X-Gek">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="0eL-zS-beJ">
+                                <rect key="frame" x="-1" y="0.0" width="390" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem title="Thêm báo thức" largeTitleDisplayMode="always" id="lG1-uM-T9S">
+                                        <barButtonItem key="backBarButtonItem" title="Отменить" id="txc-sl-SDm"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Huỷ" id="ooo-AW-yZq">
+                                            <color key="tintColor" red="1" green="0.63529411759999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="dismissButtonAction:" destination="TVp-SL-vqO" id="VUY-N2-iYF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="lưu" id="sqJ-t9-1Ek">
+                                            <color key="tintColor" red="1" green="0.63529411759999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="saveButtonAction:" destination="TVp-SL-vqO" id="c9T-nE-h5G"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BIe-f9-kmq"/>
+                        <color key="backgroundColor" red="0.1333333333" green="0.1176470588" blue="0.1450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="68y-wO-VWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2342" y="288"/>
+        </scene>
+        <!--Giờ thế giới-->
+        <scene sceneID="6ct-60-ZZc">
+            <objects>
+                <viewController id="vl2-3G-kGJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7W-03-FWj">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QIQ-Lm-8Lf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Giờ thế giới" image="network" catalog="system" id="YeU-Rk-e3a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZF-Da-sgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1348" y="485"/>
+        </scene>
+        <!--Bấm giờ-->
+        <scene sceneID="7gc-X8-CYW">
+            <objects>
+                <viewController id="uwn-AP-DE5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XlW-iE-wxG">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Lee-9v-EE6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Bấm giờ" image="stopwatch.fill" catalog="system" id="cnt-Gz-KQS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dA-f7-za7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-683" y="997"/>
+        </scene>
+        <!--Giờ đi ngủ-->
+        <scene sceneID="AkE-yV-okm">
+            <objects>
+                <viewController id="kKJ-5D-KpQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tLz-rW-XRS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="b1P-0z-UHD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Giờ đi ngủ" image="bed.double.fill" catalog="system" id="1QS-oF-1Oq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfK-C9-ndL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="1125"/>
+        </scene>
+        <!--Báo thức-->
+        <scene sceneID="7mE-au-8Xe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RqR-jm-mLL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Báo thức" image="alarm.fill" catalog="system" id="xMV-gP-ZVi">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K89-yR-qrV">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Sh-Hh-qdY" kind="relationship" relationship="rootViewController" id="z23-EH-sqA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWR-gf-mTH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541.53846153846155" y="280.80568720379148"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alarm.fill" catalog="system" width="123" height="128"/>
+        <image name="bed.double.fill" catalog="system" width="128" height="82"/>
+        <image name="network" catalog="system" width="128" height="123"/>
+        <image name="stopwatch.fill" catalog="system" width="121" height="128"/>
+        <image name="timer" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
